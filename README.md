@@ -42,8 +42,8 @@ PRUEBAS
     pytest
 2. Tambien se pueden hacer pruebas manuales usando postman o cmd
     Las pruebas que yo hice desde uvicorn fueron:
-    Invoke-RestMethod -Uri "http://127.0.0.1:8000/exchange" -Method Post -ContentType "application/json" -Body '{"base_currency": "EUR", "quote_currency": "USD", "amount": 150}'
-    Y una prueba que hice desde docker fue:
+Invoke-RestMethod -Uri "http://127.0.0.1:8000/exchange" -Method Post -ContentType "application/json" -Body '{"base_currency": "EUR", "quote_currency": "USD", "amount": 150}'
+3. Y una prueba que hice desde docker fue:
     curl -X POST "http://127.0.0.1:8000/exchange-rate" -H "Content-Type: application/json" -d '{"base_currency": "USD", "quote_currency": "EUR"}'             
 
 
