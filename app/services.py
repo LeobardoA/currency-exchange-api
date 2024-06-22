@@ -16,7 +16,7 @@ def get_exchange_rate(base_currency: str, quote_currency: str):
 def exchange_currency(base_currency: str, quote_currency: str, amount: float):
     global total_fees_collected
     rate, fee, available_amount = get_exchange_rate(base_currency, quote_currency)
-    if rate is None or amount > amounts[base_currency]:
+    if rate is None or amount > amounts[base_currency] or (amount * rate) > available_amount:
         return None, None, None
 
     fee_amount = amount * fee
@@ -28,6 +28,7 @@ def exchange_currency(base_currency: str, quote_currency: str, amount: float):
     amounts[quote_currency] = new_quote_amount
 
     return new_base_amount, new_quote_amount, total_fees_collected
+
 
 def get_total_fees():
     global total_fees_collected
