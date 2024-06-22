@@ -1,0 +1,17 @@
+# Dockerfile.tests
+
+# Utiliza una imagen base que tenga Python instalado
+FROM python:3.9-slim
+
+# Establece el directorio de trabajo en /app
+WORKDIR /app
+
+# Copia los archivos de tu proyecto al contenedor
+COPY . .
+
+# Instala las dependencias para las pruebas
+RUN pip install -r requirements.txt
+RUN pip install pytest
+
+# Ejecuta las pruebas al construir la imagen
+CMD ["pytest", "-v"]
