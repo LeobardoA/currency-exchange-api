@@ -40,7 +40,7 @@ PRUEBAS
 
 1. Ejecutar las pruebas unitarias:
     pytest
-    Tambien se pueden hacer pruebas manuales usando postman o cmd
+2. Tambien se pueden hacer pruebas manuales usando postman o cmd
     Las pruebas que yo hice desde uvicorn fueron:
     Invoke-RestMethod -Uri "http://127.0.0.1:8000/exchange" -Method Post -ContentType "application/json" -Body '{"base_currency": "EUR", "quote_currency": "USD", "amount": 150}'
     Y una prueba que hice desde docker fue:
