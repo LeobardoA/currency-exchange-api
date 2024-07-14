@@ -7,7 +7,7 @@ Esta es una API de intercambio de divisas que permite consultar tasas de cambio 
 ## Instalación
 
 1. Clonar el repositorio:
-   git clone <URL_DEL_REPOSITORIO>
+   git clone https://github.com/LeobardoA/currency-exchange-api
    cd currency-exchange-api
 
 2. Crear y activar un entorno virtual:
